@@ -8,12 +8,12 @@
 docs_image/
 k8s/
 tests/
+DockerData/
 .dockerignore
 .editorconfig
 .gitignore
 .pre-commit-config.yaml
 .prettier*
-.env.dev
 docker-compose.yml
 Dockerfile
 LICENSE
