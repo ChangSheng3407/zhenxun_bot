@@ -86,7 +86,8 @@ class AsyncHttpx:
                 logger.info(f"开始获取 {url}..")
                 response = await cls._get_single(url, **kwargs)
                 if check_status_code and response.status_code != check_status_code:
-                    raise Exception(f"Status code error: {response.status_code} != {check_status_code}")
+                    status_code = response.status_code
+                    raise Exception(f"状态码错误:{status_code}!={check_status_code}")
                 return response
             except Exception as e:
                 last_exception = e
